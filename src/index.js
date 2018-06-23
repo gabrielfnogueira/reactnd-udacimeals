@@ -6,9 +6,9 @@ import './index.css';
 import reducer from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(reducer);
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-console.log(store.getState());
+console.log(store);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
